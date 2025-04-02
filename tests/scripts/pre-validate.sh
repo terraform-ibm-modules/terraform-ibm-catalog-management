@@ -6,7 +6,7 @@
 
 set -e
 
-DA_DIR="solutions/vpe-catalog"
+DA_DIR="solutions/vpe-object"
 TERRAFORM_SOURCE_DIR="solutions/catalog"
 JSON_FILE="${DA_DIR}/catalogValidationValues.json"
 TF_VARS_FILE="terraform.tfvars"
