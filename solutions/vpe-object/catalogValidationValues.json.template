@@ -1,0 +1,9 @@
+{
+  "ibmcloud_api_key": $VALIDATION_APIKEY,
+  "label": $PREFIX,
+  "name": $PREFIX,
+  "region": "us-south",
+  "dns_domain": "example.com",
+  "endpoint_type": "api",
+  "service_crn": "crn:v1:bluemix:public:service:global:::endpoint:test.private.example.com"
+}
