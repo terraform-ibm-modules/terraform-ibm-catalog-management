@@ -17,10 +17,12 @@ TF_VARS_FILE="terraform.tfvars"
   echo "Provisioning pre-requisite catalog .."
   terraform init || exit 1
 
+  rand_string=$(openssl rand -hex 2)
+
   # $VALIDATION_APIKEY is available in the catalog runtime
   {
     echo "ibmcloud_api_key=\"${VALIDATION_APIKEY}\""
-    echo "label=\"$(openssl rand -hex 2)\""
+    echo "label=\"${rand_string}\""
     echo "kind=\"vpe\""
   } >> ${TF_VARS_FILE}
   terraform apply -input=false -auto-approve -var-file=${TF_VARS_FILE} || exit 1
@@ -30,7 +32,8 @@ TF_VARS_FILE="terraform.tfvars"
 
   cd "${cwd}"
   jq -r --arg catalog_id "${catalog_id}" \
-        '. + {catalog_id: $catalog_id}' "${JSON_FILE}" > tmpfile && mv tmpfile "${JSON_FILE}" || exit 1
+        --arg name "${rand_string}" \
+        '. + {catalog_id: $catalog_id}, {name: $name}' "${JSON_FILE}" > tmpfile && mv tmpfile "${JSON_FILE}" || exit 1
 
   echo "Pre-validation completed successfully."
 )
