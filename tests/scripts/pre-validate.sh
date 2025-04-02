@@ -21,7 +21,7 @@ TF_VARS_FILE="terraform.tfvars"
   {
     echo "ibmcloud_api_key=\"${VALIDATION_APIKEY}\""
     echo "label=\"$(openssl rand -hex 2)\""
-    echo "kind=vpe"
+    echo "kind=\"vpe\""
   } >> ${TF_VARS_FILE}
   terraform apply -input=false -auto-approve -var-file=${TF_VARS_FILE} || exit 1
   catalog_id=$(terraform output -state=terraform.tfstate -raw id)
