@@ -1,15 +1,25 @@
 ########################################################################################################################
-# Input Variables
+# Input variables
 ########################################################################################################################
 
-variable "resource_group_id" {
+variable "ibmcloud_api_key" {
   type        = string
-  description = "Resource group id the catalog is owned by."
+  description = "The IBM Cloud API key used to provision resources."
+  sensitive   = true
+}
+
+# NOTE: provider_visibility not exposed because catalog management resource do not support private endpoints
+
+variable "existing_resource_group_name" {
+  type        = string
+  description = "The name of an existing resource group to provision resource in."
+  default     = "Default"
+  nullable    = false
 }
 
 variable "label" {
   type        = string
-  description = "Display name for the catalog."
+  description = "Display name for the catalog. "
   nullable    = false
 }
 
@@ -52,33 +62,4 @@ variable "disabled" {
   type        = bool
   description = "Denotes whether a catalog is disabled."
   default     = false
-}
-
-variable "target_accounts" {
-  type = list(object({
-    api_key            = optional(string)
-    name               = string
-    label              = string
-    project_id         = optional(string)
-    trusted_profile_id = optional(string)
-    target_service_id  = optional(string)
-  }))
-  default     = []
-  nullable    = false
-  description = "List of target accounts to add to this catalog. Can only be configured on an update, not on a create."
-
-  validation {
-    condition = alltrue([
-      for target in var.target_accounts : target.api_key != null || target.trusted_profile_id != null || target.project_id != null
-    ])
-    error_message = "A value is required for either api_key, trusted_profile_id or project_id when adding a target account."
-  }
-
-  validation {
-    condition = alltrue([
-      for target in var.target_accounts : target.project_id != null ? target.api_key != null || target.trusted_profile_id != null : true
-    ])
-    error_message = "A value is required for either api_key, trusted_profile_id when adding a target account using project_id."
-  }
-
 }

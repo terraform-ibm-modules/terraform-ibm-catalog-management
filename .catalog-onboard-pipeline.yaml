@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+offerings:
+  - name: deploy-arch-ibm-catalog-management
+    kind: solution
+    catalog_id: 7df1e4ca-d54c-4fd0-82ce-3d13247308cd
+    offering_id: 69a02a09-0563-4625-9c6e-28faf4a538f4
+    variations:
+      - name: catalog
+        mark_ready: true
+        install_type: fullstack
+      - name: vpe-object
+        mark_ready: true
+        install_type: fullstack
+        pre_validation: "tests/scripts/pre-validate.sh"
+        post_validation: "tests/scripts/post-validate.sh"

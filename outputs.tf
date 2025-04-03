@@ -2,29 +2,32 @@
 # Outputs
 ########################################################################################################################
 
-#
-# Developer tips:
-#   - Below are some good practise sample outputs
-#   - They should be updated for outputs applicable to the module being added
-#   - Use variable validation when possible
-#
-
-output "account_id" {
-  description = "An alpha-numeric value identifying the account ID."
-  value       = ibm_resource_instance.cos_instance.account_id
-}
-
-output "guid" {
-  description = "The GUID of the resource instance."
-  value       = ibm_resource_instance.cos_instance.account_id
-}
-
 output "id" {
-  description = "The unique identifier of the resource instance."
-  value       = ibm_resource_instance.cos_instance.id
+  description = "The unique identifier of the catalog."
+  value       = ibm_cm_catalog.cm_catalog.id
 }
 
 output "crn" {
-  description = "The CRN of the resource instance."
-  value       = ibm_resource_instance.cos_instance.crn
+  description = "CRN associated with the catalog."
+  value       = ibm_cm_catalog.cm_catalog.crn
+}
+
+output "label" {
+  description = "Display Name."
+  value       = ibm_cm_catalog.cm_catalog.label
+}
+
+output "resource_group_id" {
+  description = "Resource group id the catalog is owned by."
+  value       = ibm_cm_catalog.cm_catalog.resource_group_id
+}
+
+output "catalog_icon_url" {
+  description = "The url of the catalog icon."
+  value       = ibm_cm_catalog.cm_catalog.catalog_icon_url
+}
+
+output "catalog_banner_url" {
+  description = " The url of the catalog banner."
+  value       = ibm_cm_catalog.cm_catalog.catalog_banner_url
 }
