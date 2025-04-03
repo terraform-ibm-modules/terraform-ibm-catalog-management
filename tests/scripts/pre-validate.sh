@@ -33,7 +33,7 @@ TF_VARS_FILE="terraform.tfvars"
   cd "${cwd}"
   jq -r --arg catalog_id "${catalog_id}" \
         --arg name "${rand_string}" \
-        '. + {catalog_id: $catalog_id}, {name: $name}' "${JSON_FILE}" > tmpfile && mv tmpfile "${JSON_FILE}" || exit 1
+        '. + {catalog_id: $catalog_id, name: $name}' "${JSON_FILE}" > tmpfile && mv tmpfile "${JSON_FILE}" || exit 1
 
   echo "Pre-validation completed successfully."
 )
