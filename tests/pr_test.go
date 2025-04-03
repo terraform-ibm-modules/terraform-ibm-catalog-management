@@ -144,8 +144,11 @@ func TestVPEDA(t *testing.T) {
 	require.NotEqual(t, "", val, checkVariable+" environment variable is empty")
 
 	logger.Log(t, "Tempdir: ", tempTerraformDir)
+	tempDaDir := tempTerraformDir + "/" + catalogDAdir
+	// Delete cache
+	os.Remove(tempDaDir + "/.terraform")
 	existingTerraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
-		TerraformDir: tempTerraformDir + "/" + catalogDAdir,
+		TerraformDir: tempDaDir,
 		Vars: map[string]interface{}{
 			"existing_resource_group_name": resourceGroup,
 			"label":                        prefix,
@@ -224,8 +227,11 @@ func TestUpgradeVPEDA(t *testing.T) {
 	require.NotEqual(t, "", val, checkVariable+" environment variable is empty")
 
 	logger.Log(t, "Tempdir: ", tempTerraformDir)
+	tempDaDir := tempTerraformDir + "/" + catalogDAdir
+	// Delete cache
+	os.Remove(tempDaDir + "/.terraform")
 	existingTerraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
-		TerraformDir: tempTerraformDir + "/" + catalogDAdir,
+		TerraformDir: tempDaDir,
 		Vars: map[string]interface{}{
 			"existing_resource_group_name": resourceGroup,
 			"label":                        prefix,
