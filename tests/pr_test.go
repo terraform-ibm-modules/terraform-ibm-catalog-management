@@ -146,7 +146,10 @@ func TestVPEDA(t *testing.T) {
 	logger.Log(t, "Tempdir: ", tempTerraformDir)
 	tempDaDir := tempTerraformDir + "/" + catalogDAdir
 	// Delete cache
-	os.Remove(tempDaDir + "/.terraform")
+	toDelete := []string{tempDaDir + "/.terraform", tempDaDir + "/.terraform.lock.hcl"}
+	for _, s := range toDelete {
+		os.RemoveAll(s)
+	}
 	existingTerraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		TerraformDir: tempDaDir,
 		Vars: map[string]interface{}{
@@ -229,7 +232,10 @@ func TestUpgradeVPEDA(t *testing.T) {
 	logger.Log(t, "Tempdir: ", tempTerraformDir)
 	tempDaDir := tempTerraformDir + "/" + catalogDAdir
 	// Delete cache
-	os.Remove(tempDaDir + "/.terraform")
+	toDelete := []string{tempDaDir + "/.terraform", tempDaDir + "/.terraform.lock.hcl"}
+	for _, s := range toDelete {
+		os.RemoveAll(s)
+	}
 	existingTerraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		TerraformDir: tempDaDir,
 		Vars: map[string]interface{}{
