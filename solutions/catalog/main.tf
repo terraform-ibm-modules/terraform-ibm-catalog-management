@@ -22,4 +22,5 @@ module "catalog" {
   catalog_banner_url = var.catalog_banner_url
   disabled           = var.disabled
   catalog_icon_url   = var.catalog_icon_url
+  target_accounts = var.target_accounts
 }

@@ -63,3 +63,18 @@ variable "disabled" {
   description = "Denotes whether a catalog is disabled."
   default     = false
 }
+
+variable "target_accounts" {
+  type = list(object({
+    api_key            = optional(string)
+    name               = string
+    label              = string
+    project_id         = optional(string)
+    trusted_profile_id = optional(string)
+    target_service_id  = optional(string)
+  }))
+  default     = []
+  nullable    = false
+  description = "List of target accounts to add to this catalog. Can only be configured on an update, not on a create."
+  # Validation happens in rule module
+}
