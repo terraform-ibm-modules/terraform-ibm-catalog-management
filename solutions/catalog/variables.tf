@@ -63,3 +63,30 @@ variable "disabled" {
   description = "Denotes whether a catalog is disabled."
   default     = false
 }
+
+variable "target_accounts" {
+  type = list(object({
+    api_key            = optional(string)
+    name               = string
+    label              = string
+    project_id         = optional(string)
+    trusted_profile_id = optional(string)
+    target_service_id  = optional(string)
+  }))
+  default     = []
+  nullable    = false
+  description = "List of target accounts to add to this catalog. Can only be configured on an update, not on a create. [Learn more](https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management/tree/main/solutions/catalog/DA-complex-input-variables.md)"
+  validation {
+    condition = alltrue([
+      for target in var.target_accounts : target.api_key != null || target.trusted_profile_id != null || target.project_id != null
+    ])
+    error_message = "A value is required for either api_key, trusted_profile_id or project_id when adding a target account."
+  }
+
+  validation {
+    condition = alltrue([
+      for target in var.target_accounts : target.project_id != null ? target.api_key != null || target.trusted_profile_id != null : true
+    ])
+    error_message = "A value is required for either api_key, trusted_profile_id when adding a target account using project_id."
+  }
+}

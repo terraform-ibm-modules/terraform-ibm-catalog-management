@@ -66,6 +66,9 @@
                 }
               },
               {
+                "key": "target_accounts"
+              },
+              {
                 "key": "short_description"
               },
               {
