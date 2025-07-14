@@ -10,7 +10,7 @@ The `target_accounts` input variable allows you to define one or more IBM Cloud 
 
 - Variable name: `target_accounts`
 - Type: A list of objects, each describing a target account configuration.
-- Default value: An empty map (`[]`)
+- Default value: An empty list (`[]`)
 
 Note: This variable can only be set during an update operation on the catalog and it cannot be specified during catalog creation.
 
@@ -33,11 +33,11 @@ Note: This variable can only be set during an update operation on the catalog an
 
 ### Example Usage
 ```
-target_accounts = [
+[
   {
     name               = "dev-account"
     label              = "Dev Account"
-    api_key            = "abcdxxxefgh"
+    api_key            = "abcdxxxefgh" # pragma: allowlist secret
     project_id         = "12345"
     trusted_profile_id = null
     target_service_id  = null
@@ -52,5 +52,3 @@ target_accounts = [
   }
 ]
 ```
-
-For more information, refer to the the [IBM Cloud Terraform Provider documentation for Catalog Management](https://registry.terraform.io/providers/IBM-Cloud/ibm/1.78.2/docs/resources/cm_catalog).
