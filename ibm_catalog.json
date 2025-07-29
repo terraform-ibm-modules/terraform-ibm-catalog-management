@@ -1,227 +1,229 @@
 {
-    "products": [
-      {
-        "name": "deploy-arch-ibm-catalog-management",
-        "label": "Cloud automation for Catalog management",
-        "product_kind": "solution",
-        "tags": [
-          "ibm_created",
-          "target_terraform",
-          "terraform",
-          "solution",
-          "dev_ops",
-          "converged_infra"
-        ],
-        "keywords": [
-          "catalog",
-          "catalog management",
-          "IaC",
-          "infrastructure as code",
-          "terraform",
-          "solution"
-        ],
-        "short_description": "Creates and configures IBM Cloud catalog resources",
-        "long_description": "This architecture supports creating and configuring IBM Cloud catalog resources.",
-        "offering_docs_url": "https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management/blob/main/README.md",
-        "offering_icon_url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-catalog-management/main/images/ibm-cloud.svg",
-        "provider_name": "IBM",
-        "features": [
-          {
-            "title": "IBM Cloud catalog",
-            "description": "Creates and configures an IBM Cloud catalog."
-          },
-          {
-            "title": "IBM Cloud catalog VPE object",
-            "description": "Creates and configures an IBM Cloud catalog VPE object."
-          }
-        ],
-        "flavors": [
-          {
-            "label": "Catalog",
-            "name": "catalog",
-            "install_type": "fullstack",
-            "working_directory": "solutions/catalog",
-            "compliance": {},
-            "configuration": [
-              {
-                "key": "ibmcloud_api_key"
-              },
-              {
-                "key": "label",
-                "required": true
-              },
-              {
-                "key": "kind",
-                "required": true
-              },
-              {
-                "key": "existing_resource_group_name",
-                "required": true,
-                "custom_config": {
-                    "type": "resource_group",
-                    "grouping": "deployment",
-                    "original_grouping": "deployment",
-                    "config_constraints": {
-                        "identifier": "rg_name"
-                    }
+  "products": [
+    {
+      "name": "deploy-arch-ibm-catalog-management",
+      "label": "Cloud automation for Catalog management",
+      "product_kind": "solution",
+      "tags": [
+        "ibm_created",
+        "target_terraform",
+        "terraform",
+        "solution",
+        "dev_ops",
+        "converged_infra"
+      ],
+      "keywords": [
+        "catalog",
+        "catalog management",
+        "IaC",
+        "infrastructure as code",
+        "terraform",
+        "solution"
+      ],
+      "short_description": "Creates and configures IBM Cloud catalog resources",
+      "long_description": "This architecture supports creating and configuring IBM Cloud catalog resources.",
+      "offering_docs_url": "https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management/blob/main/README.md",
+      "offering_icon_url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-catalog-management/main/images/ibm-cloud.svg",
+      "provider_name": "IBM",
+      "features": [
+        {
+          "title": "IBM Cloud catalog",
+          "description": "Creates and configures an IBM Cloud catalog."
+        },
+        {
+          "title": "IBM Cloud catalog VPE object",
+          "description": "Creates and configures an IBM Cloud catalog VPE object."
+        }
+      ],
+      "flavors": [
+        {
+          "label": "Catalog",
+          "name": "catalog",
+          "install_type": "fullstack",
+          "working_directory": "solutions/catalog",
+          "compliance": {},
+          "configuration": [
+            {
+              "key": "ibmcloud_api_key"
+            },
+            {
+              "key": "label",
+              "required": true
+            },
+            {
+              "key": "kind",
+              "required": true
+            },
+            {
+              "key": "existing_resource_group_name",
+              "required": true,
+              "custom_config": {
+                "type": "resource_group",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "identifier": "rg_name"
                 }
-              },
-              {
-                "key": "target_accounts"
-              },
-              {
-                "key": "short_description"
-              },
-              {
-                "key": "tags",
-                "custom_config": {
-                  "grouping": "deployment",
-                  "original_grouping": "deployment",
-                  "config_constraints": {
-                    "type": "string"
-                  }
-                }
-              },
-              {
-                "key": "catalog_banner_url"
-              },
-              {
-                "key": "catalog_icon_url"
-              },
-              {
-                "key": "disabled"
               }
-            ],
-            "iam_permissions": [
-              {
-                "service_name": "globalcatalog-collection",
-                "role_crns": [
-                  "crn:v1:bluemix:public:iam::::role:Editor"
-                ]
+            },
+            {
+              "key": "target_accounts"
+            },
+            {
+              "key": "short_description"
+            },
+            {
+              "key": "tags",
+              "custom_config": {
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "type": "string"
+                }
               }
-            ],
-            "architecture": {
-              "descriptions": "This architecture supports creating and configuring an IBM Cloud catalog.",
-              "features": [
-                {
-                  "title": "Catalog creation",
-                  "description": "Yes"
-                }
-              ],
-              "diagrams": [
-                {
-                  "diagram": {
-                    "caption": "Catalog management",
-                    "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-catalog-management/main/reference-architecture/catalog.svg",
-                    "type": "image/svg+xml"
-                  },
-                  "description": "This architecture supports creating an an IBM Cloud catalog"
-                }
+            },
+            {
+              "key": "catalog_banner_url"
+            },
+            {
+              "key": "catalog_icon_url"
+            },
+            {
+              "key": "disabled"
+            }
+          ],
+          "iam_permissions": [
+            {
+              "service_name": "globalcatalog-collection",
+              "role_crns": [
+                "crn:v1:bluemix:public:iam::::role:Editor"
               ]
             }
+          ],
+          "architecture": {
+            "descriptions": "This architecture supports creating and configuring an IBM Cloud catalog.",
+            "features": [
+              {
+                "title": "Catalog creation",
+                "description": "Yes"
+              }
+            ],
+            "diagrams": [
+              {
+                "diagram": {
+                  "caption": "Catalog management",
+                  "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-catalog-management/main/reference-architecture/catalog.svg",
+                  "type": "image/svg+xml"
+                },
+                "description": "This architecture supports creating an an IBM Cloud catalog"
+              }
+            ]
           },
-          {
-            "label": "VPE Object",
-            "name": "vpe-object",
-            "install_type": "fullstack",
-            "working_directory": "solutions/vpe-object",
-            "compliance": {},
-            "configuration": [
-              {
-                "key": "ibmcloud_api_key"
-              },
-              {
-                "key": "catalog_id",
-                "required": true
-              },
-              {
-                "key": "name",
-                "required": true
-              },
-              {
-                "key": "label",
-                "required": true
-              },
-              {
-                "key": "region",
-                "required": true
-              },
-              {
-                "key": "dns_domain",
-                "required": true
-              },
-              {
-                "key": "service_crn",
-                "required": true
-              },
-              {
-                "key": "endpoint_type",
-                "required": true,
-                "options": [
-                  {
-                    "displayname": "api",
-                    "value": "api"
-                  },
-                  {
-                    "displayname": "config",
-                    "value": "config"
-                  },
-                  {
-                    "displayname": "firewall",
-                    "value": "firewall"
-                  },
-                  {
-                    "displayname": "vpe",
-                    "value": "vpe"
-                  }
-                ]
-              },
-              {
-                "key": "short_description"
-              },
-              {
-                "key": "fully_qualified_domain_names"
-              },
-              {
-                "key": "tags",
-                "custom_config": {
-                  "grouping": "deployment",
-                  "original_grouping": "deployment",
-                  "config_constraints": {
-                    "type": "string"
-                  }
-                }
-              }
-            ],
-            "iam_permissions": [
-              {
-                "service_name": "globalcatalog-collection",
-                "role_crns": [
-                  "crn:v1:bluemix:public:iam::::role:Editor"
-                ]
-              }
-            ],
-            "architecture": {
-              "descriptions": "This architecture supports creating and configuring an IBM Cloud catalog VPE object.",
-              "features": [
+          "terraform_version": "1.10.5"
+        },
+        {
+          "label": "VPE Object",
+          "name": "vpe-object",
+          "install_type": "fullstack",
+          "working_directory": "solutions/vpe-object",
+          "compliance": {},
+          "configuration": [
+            {
+              "key": "ibmcloud_api_key"
+            },
+            {
+              "key": "catalog_id",
+              "required": true
+            },
+            {
+              "key": "name",
+              "required": true
+            },
+            {
+              "key": "label",
+              "required": true
+            },
+            {
+              "key": "region",
+              "required": true
+            },
+            {
+              "key": "dns_domain",
+              "required": true
+            },
+            {
+              "key": "service_crn",
+              "required": true
+            },
+            {
+              "key": "endpoint_type",
+              "required": true,
+              "options": [
                 {
-                  "title": "VPE object creation",
-                  "description": "Yes"
-                }
-              ],
-              "diagrams": [
+                  "displayname": "api",
+                  "value": "api"
+                },
                 {
-                  "diagram": {
-                    "caption": "Catalog VPE object",
-                    "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-catalog-management/main/reference-architecture/vpe.svg",
-                    "type": "image/svg+xml"
-                  },
-                  "description": "This architecture supports creating an an IBM Cloud catalog VPE object"
+                  "displayname": "config",
+                  "value": "config"
+                },
+                {
+                  "displayname": "firewall",
+                  "value": "firewall"
+                },
+                {
+                  "displayname": "vpe",
+                  "value": "vpe"
                 }
               ]
+            },
+            {
+              "key": "short_description"
+            },
+            {
+              "key": "fully_qualified_domain_names"
+            },
+            {
+              "key": "tags",
+              "custom_config": {
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "type": "string"
+                }
+              }
             }
-          }
-        ]
-      }
-    ]
-  }
+          ],
+          "iam_permissions": [
+            {
+              "service_name": "globalcatalog-collection",
+              "role_crns": [
+                "crn:v1:bluemix:public:iam::::role:Editor"
+              ]
+            }
+          ],
+          "architecture": {
+            "descriptions": "This architecture supports creating and configuring an IBM Cloud catalog VPE object.",
+            "features": [
+              {
+                "title": "VPE object creation",
+                "description": "Yes"
+              }
+            ],
+            "diagrams": [
+              {
+                "diagram": {
+                  "caption": "Catalog VPE object",
+                  "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-catalog-management/main/reference-architecture/vpe.svg",
+                  "type": "image/svg+xml"
+                },
+                "description": "This architecture supports creating an an IBM Cloud catalog VPE object"
+              }
+            ]
+          },
+          "terraform_version": "1.10.5"
+        }
+      ]
+    }
+  ]
+}
