@@ -41,7 +41,6 @@
           "name": "catalog",
           "install_type": "fullstack",
           "working_directory": "solutions/catalog",
-          "compliance": {},
           "configuration": [
             {
               "key": "ibmcloud_api_key"
@@ -126,7 +125,6 @@
           "name": "vpe-object",
           "install_type": "fullstack",
           "working_directory": "solutions/vpe-object",
-          "compliance": {},
           "configuration": [
             {
               "key": "ibmcloud_api_key"
@@ -145,7 +143,53 @@
             },
             {
               "key": "region",
-              "required": true
+              "required": true,
+              "options": [
+                {
+                  "displayname": "Sydney (au-syd)",
+                  "value": "au-syd"
+                },
+                {
+                  "displayname": "Sao Paolo (br-sao)",
+                  "value": "br-sao"
+                },
+                {
+                  "displayname": "Montreal (ca-mon)",
+                  "value": "ca-mon"
+                },
+                {
+                  "displayname": "Toronto (ca-tor)",
+                  "value": "ca-tor"
+                },
+                {
+                  "displayname": "Frankfurt (eu-de)",
+                  "value": "eu-de"
+                },
+                {
+                  "displayname": "Madrid (eu-es)",
+                  "value": "eu-es"
+                },
+                {
+                  "displayname": "London (eu-gb)",
+                  "value": "eu-gb"
+                },
+                {
+                  "displayname": "Osaka (jp-osa)",
+                  "value": "jp-osa"
+                },
+                {
+                  "displayname": "Tokyo (jp-tok)",
+                  "value": "jp-tok"
+                },
+                {
+                  "displayname": "Washington DC (us-east)",
+                  "value": "us-east"
+                },
+                {
+                  "displayname": "Dallas (us-south)",
+                  "value": "us-south"
+                }
+              ]
             },
             {
               "key": "dns_domain",
