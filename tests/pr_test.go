@@ -6,6 +6,7 @@ import (
 	"os"
 	"strings"
 	"testing"
+	"log"
 
 	"github.com/gruntwork-io/terratest/modules/files"
 	"github.com/gruntwork-io/terratest/modules/logger"
