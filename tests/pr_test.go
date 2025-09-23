@@ -3,11 +3,6 @@ package test
 
 import (
 	"fmt"
-	"os"
-	"strings"
-	"testing"
-	"log"
-
 	"github.com/gruntwork-io/terratest/modules/files"
 	"github.com/gruntwork-io/terratest/modules/logger"
 	"github.com/gruntwork-io/terratest/modules/random"
@@ -16,6 +11,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper/testhelper"
 	"github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper/testschematic"
+	"log"
+	"os"
+	"strings"
+	"testing"
 )
 
 // Use existing resource group
@@ -152,7 +151,7 @@ func TestVPEDA(t *testing.T) {
 		err := os.RemoveAll(s)
 		if err != nil {
 			log.Printf("failed to remove %s: %v", s, err)
- 		}
+		}
 	}
 	existingTerraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		TerraformDir: tempDaDir,
@@ -241,7 +240,7 @@ func TestUpgradeVPEDA(t *testing.T) {
 		err := os.RemoveAll(s)
 		if err != nil {
 			log.Printf("failed to remove %s: %v", s, err)
- 		}
+		}
 	}
 	existingTerraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		TerraformDir: tempDaDir,
