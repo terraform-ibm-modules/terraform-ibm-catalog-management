@@ -146,6 +146,10 @@
               "required": true,
               "options": [
                 {
+                  "displayname": "Chennai (in-che)",
+                  "value": "in-che"
+                },
+                {
                   "displayname": "Sydney (au-syd)",
                   "value": "au-syd"
                 },
