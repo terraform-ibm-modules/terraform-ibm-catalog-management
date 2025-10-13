@@ -113,7 +113,7 @@
               {
                 "diagram": {
                   "caption": "Catalog management",
-                  "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-catalog-management/main/reference-architecture/catalog.svg",
+                  "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-catalog-management/main/reference-architectures/catalog.svg",
                   "type": "image/svg+xml"
                 },
                 "description": "This architecture supports creating an an IBM Cloud catalog"
@@ -264,7 +264,7 @@
               {
                 "diagram": {
                   "caption": "Catalog VPE object",
-                  "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-catalog-management/main/reference-architecture/vpe.svg",
+                  "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-catalog-management/main/reference-architectures/vpe.svg",
                   "type": "image/svg+xml"
                 },
                 "description": "This architecture supports creating an an IBM Cloud catalog VPE object"
