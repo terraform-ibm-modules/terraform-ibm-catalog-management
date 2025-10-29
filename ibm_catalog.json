@@ -120,7 +120,7 @@
               }
             ]
           },
-          "terraform_version": "1.10.5"
+          "terraform_version": "1.12.2"
         },
         {
           "label": "VPE Object",
@@ -271,7 +271,7 @@
               }
             ]
           },
-          "terraform_version": "1.10.5"
+          "terraform_version": "1.12.2"
         }
       ]
     }
