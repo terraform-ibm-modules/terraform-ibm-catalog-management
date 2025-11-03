@@ -102,7 +102,6 @@
             }
           ],
           "architecture": {
-            "descriptions": "This architecture supports creating and configuring an IBM Cloud catalog.",
             "features": [
               {
                 "title": "Catalog creation",
@@ -254,7 +253,6 @@
             }
           ],
           "architecture": {
-            "descriptions": "This architecture supports creating and configuring an IBM Cloud catalog VPE object.",
             "features": [
               {
                 "title": "VPE object creation",
