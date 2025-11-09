@@ -15,8 +15,8 @@ Automation to manage an IBM Cloud catalog.
 * [Submodules](./modules)
     * [vpe-catalog-object](./modules/vpe-catalog-object)
 * [Examples](./examples)
-    * [Offering catalog example](./examples/offering-catalog)
-    * [VPE object example](./examples/vpe-catalog)
+    * <div style="display: inline-block;"><a href="./examples/offering-catalog">Offering catalog example</a></div> <div style="display: inline-block; vertical-align: middle;"><a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=cm-offering-catalog-example&repository=github.com/terraform-ibm-modules/terraform-ibm-catalog-management/tree/main/examples/offering-catalog" target="_blank"><img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button"></a></div>
+    * <div style="display: inline-block;"><a href="./examples/vpe-catalog">VPE object example</a></div> <div style="display: inline-block; vertical-align: middle;"><a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=cm-vpe-catalog-example&repository=github.com/terraform-ibm-modules/terraform-ibm-catalog-management/tree/main/examples/vpe-catalog" target="_blank"><img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button"></a></div>
 * [Contributing](#contributing)
 <!-- END OVERVIEW HOOK -->
 
