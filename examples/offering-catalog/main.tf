@@ -40,7 +40,7 @@ module "catalog" {
   resource_group_id = module.resource_group.resource_group_id
   kind              = "offering"
   tags              = var.resource_tags
-  # NOTE: target accounts can only be configured on an update, not on a create, so it will take 2 applys to get this config complete.
+  # NOTE: target accounts can only be configured on an update, not on a create, so it will take 2 applies to get this config complete.
   target_accounts = [
     # example of adding target account using apikey
     {

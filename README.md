@@ -15,8 +15,8 @@ Automation to manage an IBM Cloud catalog.
 * [Submodules](./modules)
     * [vpe-catalog-object](./modules/vpe-catalog-object)
 * [Examples](./examples)
-    * <div style="display: inline-block;"><a href="./examples/offering-catalog">Offering catalog example</a></div> <div style="display: inline-block; vertical-align: middle;"><a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=cm-offering-catalog-example&repository=github.com/terraform-ibm-modules/terraform-ibm-catalog-management/tree/main/examples/offering-catalog" target="_blank"><img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button"></a></div>
-    * <div style="display: inline-block;"><a href="./examples/vpe-catalog">VPE object example</a></div> <div style="display: inline-block; vertical-align: middle;"><a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=cm-vpe-catalog-example&repository=github.com/terraform-ibm-modules/terraform-ibm-catalog-management/tree/main/examples/vpe-catalog" target="_blank"><img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button"></a></div>
+    * <div style="display: inline-block;"><a href="./examples/offering-catalog">Offering catalog example</a></div> <div style="display: inline-block; vertical-align: middle;"><a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=cm-offering-catalog-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management/tree/main/examples/offering-catalog" target="_blank"><img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button"></a></div>
+    * <div style="display: inline-block;"><a href="./examples/vpe-catalog">VPE object example</a></div> <div style="display: inline-block; vertical-align: middle;"><a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=cm-vpe-catalog-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management/tree/main/examples/vpe-catalog" target="_blank"><img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button"></a></div>
 * [Contributing](#contributing)
 <!-- END OVERVIEW HOOK -->
 
@@ -72,7 +72,7 @@ You need the following permissions to run this module:
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
-| <a name="requirement_ibm"></a> [ibm](#requirement\_ibm) | >= 1.76.3, < 2.0.0 |
+| <a name="requirement_ibm"></a> [ibm](#requirement\_ibm) | >= 1.79.0, < 2.0.0 |
 
 ### Modules
 
