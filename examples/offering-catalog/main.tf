@@ -4,7 +4,7 @@
 
 module "resource_group" {
   source  = "terraform-ibm-modules/resource-group/ibm"
-  version = "1.2.0"
+  version = "1.4.0"
   # if an existing resource group is not set (null) create a new one using prefix
   resource_group_name          = var.resource_group == null ? "${var.prefix}-resource-group" : null
   existing_resource_group_name = var.resource_group
@@ -40,7 +40,7 @@ module "catalog" {
   resource_group_id = module.resource_group.resource_group_id
   kind              = "offering"
   tags              = var.resource_tags
-  # NOTE: target accounts can only be configured on an update, not on a create, so it will take 2 applys to get this config complete.
+  # NOTE: target accounts can only be configured on an update, not on a create, so it will take 2 applies to get this config complete.
   target_accounts = [
     # example of adding target account using apikey
     {
