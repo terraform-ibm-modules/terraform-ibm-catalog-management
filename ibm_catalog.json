@@ -21,7 +21,7 @@
         "solution"
       ],
       "short_description": "Creates and configures IBM Cloud catalog resources",
-      "long_description": "This architecture supports creating and configuring IBM Cloud catalog resources.",
+      "long_description": "This architecture supports creating and configuring IBM Cloud catalog resources. \n\nLeverage [Terraform IBM Modules](https://github.com/terraform-ibm-modules) to shape and scale your solutions. You can integrate Terraform IBM Modules (TIM) to extend functionality and design a solution tailored to your environment and operations needs. These modules offer reusable, customizable elements that follow IBM Cloud's recommended practices. You can access the [source code and documentation](https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management) and use it to extend your current architecture or create new solutions.",
       "offering_docs_url": "https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management/blob/main/README.md",
       "offering_icon_url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-catalog-management/main/images/ibm-cloud.svg",
       "provider_name": "IBM",
@@ -33,6 +33,10 @@
         {
           "title": "IBM Cloud catalog VPE object",
           "description": "Creates and configures an IBM Cloud catalog VPE object."
+        },
+        {
+          "title": "Composable and Extensible Architecture",
+          "description": "This architecture illustrates how Terraform IBM Modules(TIM) can be integrated to deliver a complete solution on IBM Cloud. Each module is a reusable, and validated component for security, compliance, and operational IBM best practices. You can deploy this architecture as-is or configure it as code by leveraging the underlying modules to fit your specific requirements. Explore the [source code and documentation](https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management) to adapt, extend, or create entirely new solutions using these building blocks."
         }
       ],
       "flavors": [
