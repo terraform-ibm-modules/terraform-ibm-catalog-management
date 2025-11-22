@@ -201,7 +201,14 @@
             },
             {
               "key": "service_crn",
-              "required": true
+              "required": true,
+              "value_constraints": [
+                {
+                  "type": "regex",
+                  "description": "The value provided for 'service_crn' is not valid.",
+                  "value": "^crn:v\\d:(.*:){2}service:global:::endpoint:[A-Za-z0-9.-]+$"
+                }
+              ]
             },
             {
               "key": "endpoint_type",
