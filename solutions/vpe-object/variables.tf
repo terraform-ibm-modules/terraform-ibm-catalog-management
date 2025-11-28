@@ -73,4 +73,12 @@ variable "fully_qualified_domain_names" {
 variable "service_crn" {
   type        = string
   description = "CRN of the service to map on VPE entry and on VPE gateway."
+
+  validation {
+    condition = anytrue([
+      can(regex("^crn:v\\d:(.*:){2}service:global:::endpoint:[A-Za-z0-9.-]+$", var.service_crn)),
+      var.service_crn == null,
+    ])
+    error_message = "The value provided for 'service_crn' is not valid."
+  }
 }
