@@ -210,7 +210,7 @@
                 {
                   "type": "regex",
                   "description": "The value provided for 'service_crn' is not valid.",
-                  "value": "^crn:v\\d:(.*:){2}service:global:::endpoint:[A-Za-z0-9.-]+$"
+                  "value": "^crn:v\\d:([^:]+:){2}[^:]+:[^:]+:::endpoint:[A-Za-z0-9.-]+$"
                 }
               ]
             },

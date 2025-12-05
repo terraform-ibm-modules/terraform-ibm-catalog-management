@@ -76,7 +76,7 @@ variable "service_crn" {
 
   validation {
     condition = anytrue([
-      can(regex("^crn:v\\d:(.*:){2}service:global:::endpoint:[A-Za-z0-9.-]+$", var.service_crn)),
+      can(regex("^crn:v\\d:([^:]+:){2}[^:]+:[^:]+:::endpoint:[A-Za-z0-9.-]+$", var.service_crn)),
       var.service_crn == null,
     ])
     error_message = "The value provided for 'service_crn' is not valid."
