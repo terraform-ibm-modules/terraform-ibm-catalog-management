@@ -43,6 +43,7 @@
         {
           "label": "Catalog",
           "name": "catalog",
+          "short_description": "Ideal for users looking to manage IBM Cloud private catalogs.",
           "install_type": "fullstack",
           "working_directory": "solutions/catalog",
           "configuration": [
@@ -70,7 +71,17 @@
               }
             },
             {
-              "key": "target_accounts"
+              "key": "target_accounts",
+              "custom_config": {
+                "type": "code_editor",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "supportedLanguages": [
+                    "hcl"
+                  ]
+                }
+              }
             },
             {
               "key": "short_description"
@@ -127,6 +138,7 @@
         {
           "label": "VPE Object",
           "name": "vpe-object",
+          "short_description": "Ideal for users looking to manage IBM Cloud VPE catalog objects",
           "install_type": "fullstack",
           "working_directory": "solutions/vpe-object",
           "configuration": [
