@@ -158,18 +158,18 @@
               "required": true
             },
             {
-                "key": "region",
-                "required": true,
-                "custom_config": {
-                    "type": "region",
-                    "grouping": "deployment",
-                    "original_grouping": "deployment",
-                    "config_constraints": {
-                        "showKinds": [
-                            "region"
-                        ]
-                    }
+              "key": "region",
+              "required": true,
+              "custom_config": {
+                "type": "region",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "showKinds": [
+                    "region"
+                  ]
                 }
+              }
             },
             {
               "key": "dns_domain",
