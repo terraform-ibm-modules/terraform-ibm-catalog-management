@@ -31,7 +31,7 @@ resource "ibm_project" "project_instance" {
 ########################################################################################################################
 
 module "catalog" {
-  source = "../.."
+  source = "git::https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management?ref=main"
   # remove the above line and uncomment the below 2 lines to consume the module from the registry
   # source            = "terraform-ibm-modules/catalog-management/ibm"
   # version           = "X.Y.Z" # Replace "X.Y.Z" with a release version to lock into a specific release
