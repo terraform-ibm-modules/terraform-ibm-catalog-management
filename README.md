@@ -5,6 +5,7 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Terraform Registry](https://img.shields.io/badge/terraform-registry-623CE4?logo=terraform)](https://registry.terraform.io/modules/terraform-ibm-modules/catalog-management/ibm/latest)
 
 Automation to manage an IBM Cloud catalog.
 
@@ -18,6 +19,9 @@ Automation to manage an IBM Cloud catalog.
 :information_source: Ctrl/Cmd+Click or right-click on the Schematics deploy button to open in a new tab
     * <a href="./examples/offering-catalog">Offering catalog example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=catalog-management-offering-catalog-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management/tree/main/examples/offering-catalog"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
     * <a href="./examples/vpe-catalog">VPE object example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=catalog-management-vpe-catalog-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management/tree/main/examples/vpe-catalog"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
+* [Deployable Architectures](./solutions)
+    * <a href="./solutions/catalog">Cloud automation for Catalog Management (catalog variation)</a>
+    * <a href="./solutions/vpe-object">Cloud automation for Catalog Management (VPE object variation)</a>
 * [Contributing](#contributing)
 <!-- END OVERVIEW HOOK -->
 
