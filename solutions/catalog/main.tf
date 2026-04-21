@@ -18,7 +18,7 @@ module "catalog" {
   short_description  = var.short_description
   resource_group_id  = module.resource_group.resource_group_id
   kind               = var.kind
-  tags               = var.tags
+  resource_tags      = var.tags
   catalog_banner_url = var.catalog_banner_url
   disabled           = var.disabled
   catalog_icon_url   = var.catalog_icon_url

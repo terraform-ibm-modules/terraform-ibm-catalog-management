@@ -23,7 +23,7 @@ module "catalog" {
   short_description = "Created by example code"
   resource_group_id = module.resource_group.resource_group_id
   kind              = "vpe"
-  tags              = var.tags
+  resource_tags     = var.tags
 }
 
 ########################################################################################################################
