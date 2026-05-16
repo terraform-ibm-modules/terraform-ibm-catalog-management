@@ -12,17 +12,34 @@ Automation to manage an IBM Cloud catalog.
 <!-- The following content is automatically populated by the pre-commit hook -->
 <!-- BEGIN OVERVIEW HOOK -->
 ## Overview
-* [terraform-ibm-catalog-management](#terraform-ibm-catalog-management)
-* [Submodules](./modules)
-    * [vpe-catalog-object](./modules/vpe-catalog-object)
-* [Examples](./examples)
-:information_source: Ctrl/Cmd+Click or right-click on the Schematics deploy button to open in a new tab
-    * <a href="./examples/offering-catalog">Offering catalog example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=catalog-management-offering-catalog-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management/tree/main/examples/offering-catalog"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
-    * <a href="./examples/vpe-catalog">VPE object example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=catalog-management-vpe-catalog-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management/tree/main/examples/vpe-catalog"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
-* [Deployable Architectures](./solutions)
-    * <a href="./solutions/catalog">Cloud automation for Catalog Management (catalog variation)</a>
-    * <a href="./solutions/vpe-object">Cloud automation for Catalog Management (VPE object variation)</a>
-* [Contributing](#contributing)
+<ul>
+  <li><a href="#terraform-ibm-catalog-management">terraform-ibm-catalog-management</a></li>
+  <li><a href="./modules">Submodules</a>
+    <ul>
+      <li><a href="./modules/vpe-catalog-object">vpe-catalog-object</a></li>
+    </ul>
+  </li>
+  <li><a href="./examples">Examples</a>
+    <ul>
+      <li>
+        <a href="./examples/offering-catalog">Offering catalog example</a>
+        <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=catalog-management-offering-catalog-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management/tree/main/examples/offering-catalog"><img src="https://img.shields.io/badge/Deploy%20with%20IBM%20Cloud%20Schematics-0f62fe?style=flat&logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
+      </li>
+      <li>
+        <a href="./examples/vpe-catalog">VPE object example</a>
+        <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=catalog-management-vpe-catalog-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-catalog-management/tree/main/examples/vpe-catalog"><img src="https://img.shields.io/badge/Deploy%20with%20IBM%20Cloud%20Schematics-0f62fe?style=flat&logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
+      </li>
+    </ul>
+    ℹ️ Ctrl/Cmd+Click or right-click on the Schematics deploy button to open in a new tab.
+  </li>
+  <li><a href="./solutions">Deployable Architectures</a>
+    <ul>
+      <li><a href="./solutions/catalog">Cloud automation for Catalog Management (catalog variation)</a></li>
+      <li><a href="./solutions/vpe-object">Cloud automation for Catalog Management (VPE object variation)</a></li>
+    </ul>
+  </li>
+  <li><a href="#contributing">Contributing</a></li>
+</ul>
 <!-- END OVERVIEW HOOK -->
 
 ## terraform-ibm-catalog-management
