@@ -11,5 +11,5 @@ resource "ibm_cm_object" "cm_object" {
     service_crn                  = var.service_crn
   })
   parent_id = var.region
-  tags      = var.tags
+  tags      = var.resource_tags
 }

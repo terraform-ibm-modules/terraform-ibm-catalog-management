@@ -8,6 +8,6 @@ module "vpe_object" {
   fully_qualified_domain_names = var.fully_qualified_domain_names
   service_crn                  = var.service_crn
   region                       = var.region
-  tags                         = var.tags
+  resource_tags                = var.tags
   short_description            = var.short_description
 }

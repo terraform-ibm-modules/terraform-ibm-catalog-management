@@ -3,7 +3,7 @@ resource "ibm_cm_catalog" "cm_catalog" {
   short_description  = var.short_description
   catalog_icon_url   = var.catalog_icon_url
   kind               = var.kind
-  tags               = var.tags
+  tags               = var.resource_tags
   catalog_banner_url = var.catalog_banner_url
   disabled           = var.disabled
   resource_group_id  = var.resource_group_id

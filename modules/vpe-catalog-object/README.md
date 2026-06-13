@@ -78,9 +78,9 @@ No modules.
 | <a name="input_label"></a> [label](#input\_label) | Display name. | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | The programmatic name of this VPE catalog object. | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | The parent region for this specific object. | `string` | n/a | yes |
+| <a name="input_resource_tags"></a> [resource\_tags](#input\_resource\_tags) | Add user resource tags to the IBM Cloud Catalog instance to organize, track, and manage costs. [Learn more](https://cloud.ibm.com/docs/account?topic=account-tag&interface=ui#tag-types). | `list(string)` | `[]` | no |
 | <a name="input_service_crn"></a> [service\_crn](#input\_service\_crn) | CRN of the service to map on VPE entry and on VPE gateway. | `string` | n/a | yes |
 | <a name="input_short_description"></a> [short\_description](#input\_short\_description) | Short description. | `string` | `null` | no |
-| <a name="input_tags"></a> [tags](#input\_tags) | List of tags associated with this object. | `list(string)` | `[]` | no |
 
 ### Outputs
 

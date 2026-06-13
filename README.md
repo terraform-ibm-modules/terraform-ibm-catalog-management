@@ -116,8 +116,8 @@ No modules.
 | <a name="input_kind"></a> [kind](#input\_kind) | Kind of catalog. Supported kinds are 'offering' and 'vpe'. | `string` | `"offering"` | no |
 | <a name="input_label"></a> [label](#input\_label) | Display name for the catalog. | `string` | n/a | yes |
 | <a name="input_resource_group_id"></a> [resource\_group\_id](#input\_resource\_group\_id) | Resource group id the catalog is owned by. | `string` | n/a | yes |
+| <a name="input_resource_tags"></a> [resource\_tags](#input\_resource\_tags) | Add user resource tags to the IBM Cloud Catalog instance to organize, track, and manage costs. [Learn more](https://cloud.ibm.com/docs/account?topic=account-tag&interface=ui#tag-types). | `list(string)` | `[]` | no |
 | <a name="input_short_description"></a> [short\_description](#input\_short\_description) | A description of the catalog. | `string` | `null` | no |
-| <a name="input_tags"></a> [tags](#input\_tags) | List of tags associated with this catalog. | `list(string)` | `[]` | no |
 | <a name="input_target_accounts"></a> [target\_accounts](#input\_target\_accounts) | List of target accounts to add to this catalog. Can only be configured on an update, not on a create. | <pre>list(object({<br/>    api_key            = optional(string)<br/>    name               = string<br/>    label              = string<br/>    project_id         = optional(string)<br/>    trusted_profile_id = optional(string)<br/>    target_service_id  = optional(string)<br/>  }))</pre> | `[]` | no |
 
 ### Outputs

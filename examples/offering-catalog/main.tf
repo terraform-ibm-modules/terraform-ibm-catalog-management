@@ -39,7 +39,7 @@ module "catalog" {
   short_description = "Created by example code"
   resource_group_id = module.resource_group.resource_group_id
   kind              = "offering"
-  tags              = var.resource_tags
+  resource_tags     = var.resource_tags
   # NOTE: target accounts can only be configured on an update, not on a create, so it will take 2 applies to get this config complete.
   target_accounts = [
     # example of adding target account using apikey
