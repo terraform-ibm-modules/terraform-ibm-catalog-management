@@ -2,6 +2,7 @@
 package test
 
 import (
+	"context"
 	"fmt"
 	"github.com/gruntwork-io/terratest/modules/files"
 	"github.com/gruntwork-io/terratest/modules/logger"
@@ -133,9 +134,9 @@ func TestVPEDA(t *testing.T) {
 	// Provision a catalog first
 	// ------------------------------------------------------------------------------------
 
-	prefix := fmt.Sprintf("cat_vpe_da_%s", strings.ToLower(random.UniqueId()))
+	prefix := fmt.Sprintf("cat_vpe_da_%s", strings.ToLower(random.UniqueID()))
 	realTerraformDir := ".."
-	tempTerraformDir, _ := files.CopyTerraformFolderToTemp(realTerraformDir, fmt.Sprintf(prefix+"-%s", strings.ToLower(random.UniqueId())))
+	tempTerraformDir, _ := files.CopyTerraformFolderToTemp(realTerraformDir, fmt.Sprintf(prefix+"-%s", strings.ToLower(random.UniqueID())))
 
 	// Verify ibmcloud_api_key variable is set
 	checkVariable := "TF_VAR_ibmcloud_api_key"
@@ -165,8 +166,8 @@ func TestVPEDA(t *testing.T) {
 		Upgrade: true,
 	})
 
-	terraform.WorkspaceSelectOrNew(t, existingTerraformOptions, prefix)
-	_, existErr := terraform.InitAndApplyE(t, existingTerraformOptions)
+	terraform.WorkspaceSelectOrNewContext(t, context.Background(), existingTerraformOptions, prefix)
+	_, existErr := terraform.InitAndApplyContextE(t, context.Background(), existingTerraformOptions)
 	if existErr != nil {
 		assert.True(t, existErr == nil, "Init and Apply of pre-req resources failed in TestVPEDA test")
 	} else {
@@ -190,7 +191,7 @@ func TestVPEDA(t *testing.T) {
 
 		options.TerraformVars = []testschematic.TestSchematicTerraformVar{
 			{Name: "ibmcloud_api_key", Value: options.RequiredEnvironmentVars["TF_VAR_ibmcloud_api_key"], DataType: "string", Secure: true},
-			{Name: "catalog_id", Value: terraform.Output(t, existingTerraformOptions, "id"), DataType: "string"},
+			{Name: "catalog_id", Value: terraform.OutputContext(t, context.Background(), existingTerraformOptions, "id"), DataType: "string"},
 			{Name: "name", Value: prefix, DataType: "string"},
 			{Name: "label", Value: prefix, DataType: "string"},
 			{Name: "dns_domain", Value: "example.com", DataType: "string"},
@@ -209,8 +210,8 @@ func TestVPEDA(t *testing.T) {
 		fmt.Println("Terratest failed. Debug the test and delete resources manually.")
 	} else {
 		logger.Log(t, "START: Destroy (prereq resources)")
-		terraform.Destroy(t, existingTerraformOptions)
-		terraform.WorkspaceDelete(t, existingTerraformOptions, prefix)
+		terraform.DestroyContext(t, context.Background(), existingTerraformOptions)
+		terraform.WorkspaceDeleteContext(t, context.Background(), existingTerraformOptions, prefix)
 		logger.Log(t, "END: Destroy (prereq resources)")
 	}
 }
@@ -222,9 +223,9 @@ func TestUpgradeVPEDA(t *testing.T) {
 	// Provision a catalog first
 	// ------------------------------------------------------------------------------------
 
-	prefix := fmt.Sprintf("cat_vpe_da_%s", strings.ToLower(random.UniqueId()))
+	prefix := fmt.Sprintf("cat_vpe_da_%s", strings.ToLower(random.UniqueID()))
 	realTerraformDir := ".."
-	tempTerraformDir, _ := files.CopyTerraformFolderToTemp(realTerraformDir, fmt.Sprintf(prefix+"-%s", strings.ToLower(random.UniqueId())))
+	tempTerraformDir, _ := files.CopyTerraformFolderToTemp(realTerraformDir, fmt.Sprintf(prefix+"-%s", strings.ToLower(random.UniqueID())))
 
 	// Verify ibmcloud_api_key variable is set
 	checkVariable := "TF_VAR_ibmcloud_api_key"
@@ -254,8 +255,8 @@ func TestUpgradeVPEDA(t *testing.T) {
 		Upgrade: true,
 	})
 
-	terraform.WorkspaceSelectOrNew(t, existingTerraformOptions, prefix)
-	_, existErr := terraform.InitAndApplyE(t, existingTerraformOptions)
+	terraform.WorkspaceSelectOrNewContext(t, context.Background(), existingTerraformOptions, prefix)
+	_, existErr := terraform.InitAndApplyContextE(t, context.Background(), existingTerraformOptions)
 	if existErr != nil {
 		assert.True(t, existErr == nil, "Init and Apply of pre-req resources failed in TestVPEDA test")
 	} else {
@@ -279,7 +280,7 @@ func TestUpgradeVPEDA(t *testing.T) {
 
 		options.TerraformVars = []testschematic.TestSchematicTerraformVar{
 			{Name: "ibmcloud_api_key", Value: options.RequiredEnvironmentVars["TF_VAR_ibmcloud_api_key"], DataType: "string", Secure: true},
-			{Name: "catalog_id", Value: terraform.Output(t, existingTerraformOptions, "id"), DataType: "string"},
+			{Name: "catalog_id", Value: terraform.OutputContext(t, context.Background(), existingTerraformOptions, "id"), DataType: "string"},
 			{Name: "name", Value: prefix, DataType: "string"},
 			{Name: "label", Value: prefix, DataType: "string"},
 			{Name: "dns_domain", Value: "example.com", DataType: "string"},
@@ -300,8 +301,8 @@ func TestUpgradeVPEDA(t *testing.T) {
 		fmt.Println("Terratest failed. Debug the test and delete resources manually.")
 	} else {
 		logger.Log(t, "START: Destroy (prereq resources)")
-		terraform.Destroy(t, existingTerraformOptions)
-		terraform.WorkspaceDelete(t, existingTerraformOptions, prefix)
+		terraform.DestroyContext(t, context.Background(), existingTerraformOptions)
+		terraform.WorkspaceDeleteContext(t, context.Background(), existingTerraformOptions, prefix)
 		logger.Log(t, "END: Destroy (prereq resources)")
 	}
 }
