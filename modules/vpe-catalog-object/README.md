@@ -53,7 +53,7 @@ You need the following permissions to run this module:
 ### Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
 | <a name="requirement_ibm"></a> [ibm](#requirement\_ibm) | >= 1.79.0, < 3.0.0 |
 
@@ -64,13 +64,13 @@ No modules.
 ### Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [ibm_cm_object.cm_object](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cm_object) | resource |
 
 ### Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_catalog_id"></a> [catalog\_id](#input\_catalog\_id) | Catalog identifier. | `string` | n/a | yes |
 | <a name="input_dns_domain"></a> [dns\_domain](#input\_dns\_domain) | DNS domain for the VPE to create. | `string` | n/a | yes |
 | <a name="input_endpoint_type"></a> [endpoint\_type](#input\_endpoint\_type) | What the VPE exposes, one of api, config, firewall. | `string` | `"api"` | no |
@@ -85,7 +85,7 @@ No modules.
 ### Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_crn"></a> [crn](#output\_crn) | CRN associated with the object. |
 | <a name="output_id"></a> [id](#output\_id) | The unique identifier of the object. |
 | <a name="output_label"></a> [label](#output\_label) | Display Name. |

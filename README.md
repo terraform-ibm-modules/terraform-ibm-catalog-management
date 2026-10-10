@@ -92,7 +92,7 @@ You need the following permissions to run this module:
 ### Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
 | <a name="requirement_ibm"></a> [ibm](#requirement\_ibm) | >= 1.79.0, < 3.0.0 |
 
@@ -103,13 +103,13 @@ No modules.
 ### Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [ibm_cm_catalog.cm_catalog](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cm_catalog) | resource |
 
 ### Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_catalog_banner_url"></a> [catalog\_banner\_url](#input\_catalog\_banner\_url) | URL for a banner image for this catalog. | `string` | `null` | no |
 | <a name="input_catalog_icon_url"></a> [catalog\_icon\_url](#input\_catalog\_icon\_url) | URL for an icon associated with this catalog. | `string` | `null` | no |
 | <a name="input_disabled"></a> [disabled](#input\_disabled) | Denotes whether a catalog is disabled. | `bool` | `false` | no |
@@ -123,7 +123,7 @@ No modules.
 ### Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_catalog_banner_url"></a> [catalog\_banner\_url](#output\_catalog\_banner\_url) | The url of the catalog banner. |
 | <a name="output_catalog_icon_url"></a> [catalog\_icon\_url](#output\_catalog\_icon\_url) | The url of the catalog icon. |
 | <a name="output_crn"></a> [crn](#output\_crn) | CRN associated with the catalog. |
